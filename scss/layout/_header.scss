@@ -1,0 +1,43 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+
+.l-header{
+  background-color: color.$c-header_color;
+  // height: 217px;
+  color: color.$c-side_text;
+  padding-left: 42px;
+  padding-right: 32px;
+  padding-top: 66px;
+  padding-bottom: 66px;
+  @include mixin.mq("tab-down") {
+    padding: 40px 9%;
+    position: relative;
+  }
+}
+
+.l-header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mixin.mq("tab-down") {
+    flex-direction: column;
+    justify-content: center;
+      }
+}
+
+.l-header-title{
+  @include mixin.font-size(64);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #707070;
+  // height: 47px; /* 任意の高さ */
+  // line-height: 47px; /* 要素の高さと同じ値 */
+  // text-align: center; /* テキストを中央揃えにする */
+  display: flex;
+  align-items: center;
+  @include mixin.mq("tab-down") {
+    margin-bottom: 38px;
+    @include mixin.font-size(40);
+  }
+}
+

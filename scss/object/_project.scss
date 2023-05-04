@@ -1,0 +1,118 @@
+@use "../foundation/mixin";
+.p-search-container{
+  width: 41%;
+  @include mixin.mq("tab-down"){
+    width: 72%;
+  }
+}
+.p-search-container form {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  // margin-top: 40px;
+}
+
+.p-search-container input[type=text] {
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  font-family: FontAwesome;
+  @include mixin.font-size(20);
+  height: 46px;
+  width: 250px;
+  text-align-last: left;
+  padding-left: 8px;
+  flex: 1;
+}
+
+.p-search-container input[type=submit] {
+  border: 1px solid #707070;
+  background:linear-gradient(to right, #DED8D3,#F2EDE9);
+  min-width: 136px;
+  @include mixin.font-size(16);
+  font-family: mplus-1m;
+  font-weight: bold;
+  color: #707070;
+  height: 46px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.p-hamburger{
+  display: none;
+  @include mixin.mq("tab-down"){
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: block;
+    width: 87px;
+    height: 40px;
+    @include mixin.font-size(34);
+    font-weight: bold;
+  }
+  @include mixin.mq("sp-down"){
+    @include mixin.font-size(20);
+    top: 8px;
+    right: 8px;
+  }
+}
+
+
+.p-fv{
+  height: 530px;
+  background-image: url(/images/main_visual.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 234px 86px;
+  @include mixin.font-size(40);
+  color: #fff;
+}
+
+.p-take-out{
+  background-image: url(../images/take_out.jpg);
+}
+.p-eat-in{
+  background-image: url(../images/eat_in.jpg);
+}
+
+.p-contents-parts{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 47%;
+  min-height: 1198px;
+  max-width: 100%;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mixin.mq("sp-down") {
+    width: 100%;
+  }
+
+}
+
+.p-text-box{
+  color: #3C2A10;
+  max-height: 100%;
+}
+
+.p-hamburger__mask {
+  display: none;
+  transition: all .3s;
+}
+
+.p-hamburger__mask.is-open{
+  display: block;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.8;
+  z-index: 2;
+  cursor: pointer;
+}
