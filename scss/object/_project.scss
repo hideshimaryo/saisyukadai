@@ -4,11 +4,15 @@
   @include mixin.mq("tab-down"){
     width: 72%;
   }
+  @include mixin.mq("sp-down"){
+    width: 100%;
+  }
 }
 .p-search-container form {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   // margin-top: 40px;
 }
 
@@ -23,12 +27,15 @@
   text-align-last: left;
   padding-left: 8px;
   flex: 1;
+  @include mixin.mq("sp-down"){
+    width: 216px;
+  }
 }
 
 .p-search-container input[type=submit] {
   border: 1px solid #707070;
   background:linear-gradient(to right, #DED8D3,#F2EDE9);
-  min-width: 136px;
+  min-width: 80px;
   @include mixin.font-size(16);
   font-family: mplus-1m;
   font-weight: bold;
@@ -37,6 +44,9 @@
   border-radius: 10px;
   cursor: pointer;
   margin-left: 16px;
+  @include mixin.mq("sp-down"){
+    min-width: 90px;
+  }
 }
 
 .p-hamburger{
@@ -116,3 +126,5 @@
   z-index: 2;
   cursor: pointer;
 }
+
+

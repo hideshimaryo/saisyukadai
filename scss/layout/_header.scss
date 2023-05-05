@@ -30,9 +30,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #707070;
-  // height: 47px; /* 任意の高さ */
-  // line-height: 47px; /* 要素の高さと同じ値 */
-  // text-align: center; /* テキストを中央揃えにする */
   display: flex;
   align-items: center;
   @include mixin.mq("tab-down") {
