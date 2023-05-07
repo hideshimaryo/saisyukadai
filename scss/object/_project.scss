@@ -115,6 +115,7 @@
 }
 
 .p-hamburger__mask.is-open{
+  @include mixin.mq("tab-down") {
   display: block;
   background: #000;
   width: 100vw;
@@ -125,6 +126,7 @@
   opacity: 0.8;
   z-index: 2;
   cursor: pointer;
+  }
 }
 
 
