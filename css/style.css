@@ -591,6 +591,7 @@ body {
   border-radius: 10px;
   background-color: #FFFFFF;
   font-family: FontAwesome;
+  text-align: left;
   font-size: 20px;
   font-size: 1.25rem;
   height: 46px;
@@ -765,6 +766,8 @@ body {
   z-index: 1;
   display: flex;
   align-items: center;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 @media (max-width: 599px) {
   .p-archive-top-view {
@@ -808,6 +811,7 @@ body {
   font-size: 16px;
   font-size: 1rem;
   padding-left: 20px;
+  padding-top: 10px;
 }
 @media (max-width: 599px) {
   .p-archive-top-view__sub-title {
