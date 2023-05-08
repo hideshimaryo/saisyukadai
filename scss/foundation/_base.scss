@@ -1,11 +1,13 @@
-@use "mixin";
+@use "../foundation/mixin";
 
 body{
   overflow-x: hidden;
 }
 
 body.is-open {
-	position: fixed;
+  @include mixin.mq("pc-down") {
+    position: fixed;
+  }
 }
 
 .flex-box{
@@ -19,11 +21,8 @@ body.is-open {
   width: 85%;
   max-width: 100%;
   margin: 0 auto;
-  @include mixin.mq("tab-down") {
+  @include mixin.mq("pc-down") {
     max-width: 754px;
-  }
-  @include mixin.mq("sp-down") {
-    max-width: 336px;
   }
 }
 

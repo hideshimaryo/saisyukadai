@@ -16,7 +16,7 @@
   top: 46%;
   left: 25px;
   @include mixin.font-size(36);
-  @include mixin.mq("tab-up") {
+  @include mixin.mq("sp-up") {
     @include mixin.font-size(40);
   }
 }
@@ -77,63 +77,12 @@
   line-height: 33px;
   z-index: 3;
   margin-top: 28px;
-  @include mixin.mq("tab-up") {
+  @include mixin.mq("sp-up") {
     width: 697px;
     font-size: 16px;
 }
 }
 
-// サイドバーの閉じるボタンー↓ーーー
-.c-batu{
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  @include mixin.mq("tab-up") {
-    display: none;
-  }
-
-}
-
-
-.c-batu::before, .c-batu::after { /* 共通設定 */
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6px; /* 棒の幅（太さ） */
-  height: 46px; /* 棒の高さ */
-  background: #707070;
-}
- 
-.c-batu::before {
-  transform: translate(-50%,-50%) rotate(45deg);
-}
- 
-.c-batu::after {
-  transform: translate(-50%,-50%) rotate(-45deg);
-}
-// サイドバーの閉じるボタンー↑ーーー
-
-// ハンバーガーメニュー↓ーーー
-.c-open,
-.c-close{
-  @include mixin.mq("tab-up") {
-    display: none;
-  }
-}
-
-.c-open{
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 20px;
-  color: #707070;
-  font-weight: bold;
-  @include mixin.mq("sp-up") {
-   font-size: 34px;
-  }
-}
 
 // ハンバーガーメニュー↑ーーー
 
@@ -177,3 +126,46 @@
 .c-copyright{
   @include mixin.font-size(14);
 }
+
+// アーカイブ↓ーーーーーーー
+.c-archive-heading{
+  font-weight: bold;
+  @include mixin.font-size(36);
+  @include mixin.mq("sp-down"){
+    @include mixin.font-size(28);
+  }
+}
+
+.c-archive-text{
+  margin-top: 20px;
+  margin-bottom: 70px;
+  line-height: 24px;
+  @include mixin.mq("sp-down"){
+    margin-bottom: 20px;
+  }
+}
+
+.c-burger-card__button{
+  width: 43%;
+  min-width: 160px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  display: block;
+  @include mixin.mq("pc-down"){
+    margin-top: 45px;
+    width: 163px;
+    height: 42px;
+  }
+  @include mixin.mq("sp-down"){
+    margin-top: 40px;
+  }
+
+  a{
+    color: #707070;
+    font-weight: bold;
+  }
+}
+

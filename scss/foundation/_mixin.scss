@@ -1,22 +1,22 @@
 
 
 // レイアウト幅
-$layout-width-canvas-sp: 375px;
-$layout-width-canvas-tab: 834px;
-$layout-width-canvas-pc: 1920px;
+$layout-width-canvas-sp: 600px;
+// $layout-width-canvas-tab: 1025px;
+$layout-width-canvas-pc: 1025px;
 
 // ブレークポイント
 $breakpoints: (
 	"sp-down": "(max-width: #{$layout-width-canvas-sp - 1px})",
 	"sp-up": "(min-width: #{$layout-width-canvas-sp})",
-	"tab-down": "(max-width: #{$layout-width-canvas-tab - 1px})",
-	"tab-up": "(min-width: #{$layout-width-canvas-tab})",
+	// "tab-down": "(max-width: #{$layout-width-canvas-tab - 1px})",
+	// "tab-up": "(min-width: #{$layout-width-canvas-tab})",
 	"pc-down": "(max-width: #{$layout-width-canvas-pc - 1px})",
 	"pc-up": "(min-width: #{$layout-width-canvas-pc})",
 );
 
 // メディアクエリー
-@mixin mq($breakpoint: sp) {
+@mixin mq($breakpoint: "pc-up") {
 	@media #{map-get($breakpoints, $breakpoint)} {
 		@content;
 	}

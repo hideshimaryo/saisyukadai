@@ -10,7 +10,7 @@
   padding-top: 41px;
   padding-bottom: 27px;
   position: relative;
-  @include mixin.mq("tab-down") {
+  @include mixin.mq("pc-down") {
   padding-top: 30px;
   padding-bottom: 24px;
   }
