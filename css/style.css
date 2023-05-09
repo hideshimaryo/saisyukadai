@@ -590,7 +590,6 @@ body {
   border: 1px solid #707070;
   border-radius: 10px;
   background-color: #FFFFFF;
-  font-family: FontAwesome;
   text-align: left;
   font-size: 20px;
   font-size: 1.25rem;
@@ -605,6 +604,14 @@ body {
   .p-search-container input[type=text] {
     width: 216px;
   }
+}
+
+.p-search-container input[type=text]::-moz-placeholder {
+  font-family: FontAwesome;
+}
+
+.p-search-container input[type=text]::placeholder {
+  font-family: FontAwesome;
 }
 
 .p-search-container input[type=submit] {

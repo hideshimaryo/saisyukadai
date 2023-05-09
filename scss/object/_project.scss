@@ -20,7 +20,7 @@
   border: 1px solid #707070;
   border-radius: 10px;
   background-color: #FFFFFF;
-  font-family: FontAwesome;
+  // font-family: FontAwesome;
   text-align: left;
   @include mixin.font-size(20);
   height: 46px;
@@ -31,6 +31,10 @@
   @include mixin.mq("sp-down"){
     width: 216px;
   }
+}
+
+.p-search-container input[type=text]::placeholder{
+  font-family: FontAwesome;
 }
 
 .p-search-container input[type=submit] {
